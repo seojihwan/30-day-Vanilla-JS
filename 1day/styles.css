@@ -1,0 +1,30 @@
+html,
+body {
+  background: url(https://i.imgur.com/b9r5sEL.jpg) bottom center;
+}
+.keysWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.keysWrapper div {
+  width: 10%;
+  height: 10%;
+  border-style: solid;
+  background-color: rgba(172, 109, 37, 0.3);
+  border-color: #000000;
+  transition: all 0.07s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
