@@ -21,8 +21,15 @@ document.body.appendChild(keysWrapper);
 keys.forEach((key, idx) => {
   const keyboard = document.createElement('div');
   const audio = document.createElement('audio');
+  const keyIdx = document.createElement('div');
+  const drumName = document.createElement('div');
+  drumName.innerHTML = keyNames[idx];
+  drumName.className = 'drumName';
+  keyIdx.innerHTML = String.fromCharCode(key).toUpperCase();
+  keyIdx.className = 'keyIdx';
   keyboard.className = 'key';
-  keyboard.innerHTML = keyNames[idx];
+  keyboard.appendChild(keyIdx);
+  keyboard.appendChild(drumName);
   keyboard.setAttribute('keyCode', key);
   audio.src = `./sound/${keyNames[idx]}.wav`;
   audio.setAttribute('keyCode', key);
