@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update CSS Variables with JS</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h2>
+      Update CSS Varialbes with
+      <span class="hl">JS</span>
+    </h2>
+
+    <div class="controls">
+      <label for="spacing">spacing</label>
+      <input
+        id="spacing"
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="blur">blur</label>
+      <input
+        id="blur"
+        type="range"
+        name="blur"
+        min="0"
+        max="25"
+        value="10"
+        data-sizing="px"
+      />
+      <label for="base">base</label>
+      <input id="base" type="color" name="base" value="#ffc600" />
+    </div>
+
+    <img
+      src="https://img.animalplanet.co.kr/news/2019/11/18/700/3oe4ryoa87265285kmct.jpg"
+    />
+    <script src="./index.js"></script>
+  </body>
+</html>
