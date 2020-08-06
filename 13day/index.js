@@ -1,16 +1,26 @@
-function debounce(func, wait = 20, immediate = true) {
+function debounce(func, wait = 20) {
   let timeout;
   return function () {
-    let context = this,
-      args = arguments;
-    let later = function () {
-      timeout = null;
-      if (!immediate) func.apply(context, args);
-    };
-    let callNow = immediate && !timeout;
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-    if (callNow) func.apply(context, args);
+    let args = arguments;
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = setTimeout(() => {
+      func(args);
+    }, wait);
+  };
+}
+
+function throttle(func, wait = 20) {
+  let timeout;
+  return function () {
+    let args = arguments;
+    if (!timeout) {
+      timeout = setTimeout(() => {
+        timeout = null;
+        func(args);
+      }, wait);
+    }
   };
 }
 
