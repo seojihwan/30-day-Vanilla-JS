@@ -1,0 +1,14 @@
+{
+  "name": "20day",
+  "version": "1.0.0",
+  "description": "![image](./LocalStorage_and_Event_Delegation.gif)",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --directory --server --files \"*.css, *.html, *.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.12"
+  }
+}
