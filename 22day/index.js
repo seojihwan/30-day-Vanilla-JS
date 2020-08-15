@@ -3,11 +3,10 @@ const highLight = document.createElement('span');
 highLight.classList.add('highlight');
 document.body.appendChild(highLight);
 
-// Element.getBoundingCLientRect()를 이용해서 width, height, 부모 element에 대한
-// 떨어진 정도 값을 얻을 수 있다.
+// Element.getBoundingCLientRect()를 이용해서 width, height, Viewport에서의 top, left, right, bottom 값을 얻을 수 있다.
 function highLightLink() {
   const linkCoords = this.getBoundingClientRect();
-  console.log(linkCoords);
+  console.log(linkCoords, this.offsetTop);
   const coords = {
     width: linkCoords.width,
     height: linkCoords.height,
